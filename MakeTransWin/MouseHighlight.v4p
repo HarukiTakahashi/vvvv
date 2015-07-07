@@ -1,0 +1,109 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+   <PATCH nodename="C:\Users\admin\Documents\GitHub\vvvv\MakeTransWin\MouseHighlight.v4p" scrollx="0" scrolly="0" systemname="MTW" filename="C:\Users\Darrell\Documents\_vvvv\MakeTransWin\MTW.v4p">
+   <BOUNDS type="Window" left="3540" top="1605" width="9930" height="8160">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="33.7.0">
+   </PACK>
+   <NODE systemname="ScreenInfo (Windows)" filename="%VVVV%\addonpack\lib\nodes\plugins\ScreenInfo.dll" nodename="ScreenInfo (Windows)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="1935" top="1710" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="ResolutionXY" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="28" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="1200" top="810" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1200" top="810" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Enable">
+   </PIN>
+   </NODE>
+   <NODE systemname="Mouse (Devices Desktop)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Mouse (Devices Desktop)" componentmode="Hidden" id="31">
+   <BOUNDS type="Node" left="465" top="1620" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="PositionXY" visible="1">
+   </PIN>
+   <PIN pinname="Left Button" visible="1">
+   </PIN>
+   <PIN pinname="Right Button" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="50" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="960" top="4410" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="960" top="4410" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1" slicecount="2" values="0,0">
+   </PIN>
+   </NODE>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="51">
+   <BOUNDS type="Node" left="1620" top="3225" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="31" srcpinname="Left Button" dstnodeid="51" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="31" srcpinname="Right Button" dstnodeid="51" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="MakeMark" filename="modules\MakeMark.v4p" nodename="modules\MakeMark.v4p" componentmode="Hidden" id="38">
+   <BOUNDS type="Node" left="975" top="3878" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="0" top="2085" width="6190" height="5785">
+   </BOUNDS>
+   <BOUNDS type="Window" left="4665" top="3180" width="12330" height="8145">
+   </BOUNDS>
+   <PIN pinname="Timing - Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Size" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="28" srcpinname="Y Output Value" dstnodeid="38" dstpinname="Enable">
+   </LINK>
+   <LINK srcnodeid="31" srcpinname="PositionXY" dstnodeid="38" dstpinname="XY">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="ResolutionXY" dstnodeid="38" dstpinname="ScreenSize">
+   </LINK>
+   <LINK srcnodeid="38" srcpinname="Output" dstnodeid="50" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="Output" dstnodeid="38" dstpinname="Timing">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="52" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2370" top="3300" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2370" top="3300" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.49">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Size">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="52" srcpinname="Y Output Value" dstnodeid="38" dstpinname="Size">
+   </LINK>
+   </PATCH>
