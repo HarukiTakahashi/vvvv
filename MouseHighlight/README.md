@@ -1,4 +1,6 @@
 # マウスを目立たせます
+![じふぅ](https://pbs.twimg.com/tweet_video/CGfsqNTVAAAdSXI.mp4)
+
 マウスカーソルの周りにリング状のハイライトを表示
 * Enable をオンにすれば動くはずです．
 * Timing というピンにBangをつなぐと，その値変化に反応するようになります．
