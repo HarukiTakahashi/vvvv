@@ -1,5 +1,5 @@
 # マウスを目立たせます
-![じふぅ](https://pbs.twimg.com/tweet_video/CGfsqNTVAAAdSXI.mp4)
+![じふぅ](http://i.gyazo.com/7e0094cd6e93fe90881d902bd4bef179.gif)
 
 マウスカーソルの周りにリング状のハイライトを表示
 * Enable をオンにすれば動くはずです．
