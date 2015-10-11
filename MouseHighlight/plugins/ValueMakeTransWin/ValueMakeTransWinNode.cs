@@ -53,14 +53,14 @@ namespace VVVV.Nodes
 		public void Evaluate(int SpreadMax)
 		{
 			if (!flag){
-				Main.FormBorderStyle = FormBorderStyle.None;
+				//Main.FormBorderStyle = FormBorderStyle.None;
 				Main.TopMost = true;
 				Main.Show();
 				Main.Text = "Main";
 				flag = true;
 				FLogger.Log(LogType.Debug, "hi tty!");
 				Main.BackColor =  Color.White;
-				Main.TransparencyKey = Color.White;
+				//Main.TransparencyKey = Color.White;
 				g = Main.CreateGraphics();
 			}
 			if(FEnable[0]){
